@@ -1,0 +1,15 @@
+/note.txt
+
+/superset/superset_home
+/superset/superset_db_data
+
+/notebooks/.ipynb_checkpoints
+
+/jars/aws-java-sdk-bundle-1.11.1026.jar
+
+/spark/ipython
+/spark/.pyiceberg.yaml
+/spark/Dockerfile
+/spark/requirements.txt
+/spark/entrypoint.sh
+/spark/spark-defaults.conf
