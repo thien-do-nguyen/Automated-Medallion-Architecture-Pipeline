@@ -165,5 +165,15 @@ services:
     networks:
       - iceberg_net
 
+  flask:
+    build: ./flask
+    container_name: flask
+    ports:
+      - "5050:5050"
+    depends_on:
+      - spark-iceberg
+    networks:
+      iceberg_net:
+
 networks:
   iceberg_net:

@@ -70,3 +70,12 @@ GROUP BY
     channel
 ORDER BY
     total_pageviews DESC;
+
+CREATE TABLE IF NOT EXISTS gold.als_training_input (
+  user_id INT,
+  item_id INT,
+  interaction_score FLOAT,
+  interaction_type STRING,
+  feature_ts TIMESTAMP,
+  feature_version STRING
+);

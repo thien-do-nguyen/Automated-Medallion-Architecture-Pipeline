@@ -47,7 +47,17 @@ CREATE TABLE IF NOT EXISTS purchases
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE user_recommendations (
+    user_id INT,
+    item_id INT,
+    score FLOAT,
+    model_version TEXT,
+    generated_at TIMESTAMP,
+    PRIMARY KEY (user_id, item_id)
+);
+
 -- Grant SELECT permission on the newly created tables
 GRANT SELECT ON TABLE users TO readonly;
 GRANT SELECT ON TABLE items TO readonly;
 GRANT SELECT ON TABLE purchases TO readonly;
+GRANT SELECT ON TABLE user_recommendations TO readonly;
